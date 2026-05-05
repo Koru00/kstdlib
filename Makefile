@@ -7,7 +7,7 @@ AR = ar
 ARFLAGS = rcs
 
 # Directories
-SRC_DIRS = memory string system
+SRC_DIRS = memory string system stdio
 BUILD_DIR = build
 
 # Find all .c files automatically
