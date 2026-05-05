@@ -1,8 +1,8 @@
 #pragma once
 
-#include <stdint.h>
+#include <stddef.h>
 
-void* os_alloc(uint32_t size);
-void* os_alloc_zero(uint32_t size);
-void os_resize_ptr(void* ptr, uint32_t new_size);
-void free(void* free);
+void* os_alloc(size_t size);
+void* os_calloc(size_t num, size_t size);
+void* os_resize_ptr(void* ptr, size_t new_size);
+void os_free(void* ptr);

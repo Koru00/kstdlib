@@ -70,7 +70,7 @@ void printf(const char *str, ...)
             case 'd':
             {
                 int d = va_arg(args, int);
-                string num_str = itoa(d);
+               	char* num_str = itoa(d);
                 for (char *p = num_str; *p; p++) {
                     putChar(*p);
                 }

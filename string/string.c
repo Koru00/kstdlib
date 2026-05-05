@@ -2,7 +2,27 @@
 #include "math/math.h"
 #include "system/mem_alloc.h"
 
-string itoa(int num)
+int strlen(const char* str)
+{
+	int i;
+	for (i = 0; str[i] != '\0'; i++);
+	return i;
+}
+
+void strcat(char* src, const char* str)
+{
+	int len_src = strlen(src);
+	int len_str = strlen(str);
+
+	for (int i = (len_src); i < (len_src + len_str); i++)
+	{
+		src[i] = str[i - len_src];
+	}
+
+	src[len_src + len_str] = '\0';
+}
+
+char* itoa(int num)
 {	
 	// if the num is 0 just return "0"
 	if (num == 0)
@@ -11,7 +31,7 @@ string itoa(int num)
 	int num_digits = digits(num);
 
 	// Allocate the size of the number + '\0'
-	string str = (char*) os_alloc(sizeof(char)*num_digits + 1);
+	char* str = (char*) os_alloc(sizeof(char)*num_digits + 1);
 
 	for (int i = 0; num != 0; i++)
 	{

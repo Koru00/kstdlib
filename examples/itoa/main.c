@@ -9,5 +9,8 @@ int main(void)
 
 	string str = itoa(num);
 
+	int len = strlen(str);
+	printf("string len: %d\n", len);
+
 	println(str);
 }
