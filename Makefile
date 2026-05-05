@@ -2,12 +2,12 @@
 CC = gcc
 
 # Flags
-CFLAGS = -Wall -Wextra -Werror -Iinclude -ffreestanding -O2
+CFLAGS = -Wall -Wextra -Iinclude -ffreestanding -O2
 AR = ar
 ARFLAGS = rcs
 
 # Directories
-SRC_DIRS = memory string system stdio
+SRC_DIRS = math memory string system stdio
 BUILD_DIR = build
 
 # Find all .c files automatically

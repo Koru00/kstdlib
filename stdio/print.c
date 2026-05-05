@@ -1,4 +1,5 @@
 #include "system/terminal.h"
+#include "string/string.h"
 
 #include <stddef.h>
 #include <stdarg.h>
@@ -66,15 +67,15 @@ void printf(const char *str, ...)
                 }
                 break;
             }
-            /*case 'd':
+            case 'd':
             {
                 int d = va_arg(args, int);
-                char *num_str = int_to_str(d);
+                string num_str = itoa(d);
                 for (char *p = num_str; *p; p++) {
                     putChar(*p);
                 }
                 break;
-            }*/
+            }
             case 'x':
             {
                 unsigned int num = va_arg(args, unsigned int);
